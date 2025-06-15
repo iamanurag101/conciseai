@@ -5,8 +5,9 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative mx-auto flex flex-col z-0 items-center justify-center py-16 sm:py-20 
-    lg:pb-28 transition-all animate-in lg:px-12 max-w-7xl">
+    <section className="relative">
+      <div className="mx-auto flex flex-col z-0 items-center justify-center py-16 sm:py-20 
+      lg:pb-28 transition-all animate-in px-6 sm:px-8 lg:px-12 max-w-7xl">
         <div className="relative p-[1px] overflow-hidden rounded-full bg-linear-to-r 
         from-orange-200 via-orange-500 to-orange-800 animate-gradient-x group">
           <Badge
@@ -40,6 +41,7 @@ export default function HeroSection() {
             </Link>
           </Button>
         </div>
+      </div>
     </section>
   );
 }
