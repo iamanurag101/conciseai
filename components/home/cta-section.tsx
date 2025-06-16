@@ -16,7 +16,7 @@ export default function CTASection() {
                     <div>
                         <Button size='lg' variant={'link'} className="w-full min-[400px]:w-auto bg-gradient-to-r 
                         from-slate-900 to-orange-500 hover:from-orange-500 
-                        hover:to-slate-900 hover:text-white text-white 
+                        hover:to-slate-900 hover:no-underline text-white 
                         transition-all duration-300">
                             <Link href="/#pricing" className="flex items-center justify-center">Get Started <ArrowRight className="ml-2 h-4 w-4 animate-pulse"/></Link>
                         </Button>
