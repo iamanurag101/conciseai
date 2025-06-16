@@ -1,12 +1,10 @@
 export default function BgGradient({
-  children,
   className,
 }: {
-  children?: React.ReactNode;
   className?: string;
 }) {
   return (
-    <div className={`relative isolate ${className}`}>
+    <div className={`relative ${className}`}>
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-30"
@@ -20,7 +18,6 @@ export default function BgGradient({
                      bg-linear-to-br from-orange-500 via-amber-500 to-yellow-500 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72rem]"
         />
       </div>
-      {children}
     </div>
   );
 }
