@@ -24,7 +24,7 @@ const UploadFormInput = forwardRef<HTMLFormElement, UploadFormInputProps>(({ onS
                     className = {cn(isLoading && 'opacity-50 cursor-not-allowed')}
                     disabled={isLoading}
                 />
-                <Button disabled={isLoading}>{isLoading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin"/> Processing...</> : 'Upload your PDF'}</Button>
+                <Button disabled={isLoading} className="bg-orange-600 hover:bg-orange-500">{isLoading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin"/> Processing...</> : 'Upload your PDF'}</Button>
             </div>
         </form>
     )
