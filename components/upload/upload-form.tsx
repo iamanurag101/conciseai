@@ -35,8 +35,8 @@ export default function UploadForm () {
             description: err.message
         })
         },
-        onUploadBegin: ({ file }) => {
-        console.log("upload has begun for", file);
+        onUploadBegin: (fileName : string) => {
+        console.log("upload has begun for", fileName);
         },
     });
 
@@ -80,7 +80,7 @@ export default function UploadForm () {
             })
     
             // Parse the PDF using LangChain
-            const result = await generatePdfSummary(resp);
+            const result = await generatePdfSummary([resp[0]]);
             
             const { data = null, message = null } = result || {};
     
