@@ -1,9 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 import Navlink from "./nav-link";
+import PlanBadge from "./plan-badge";
 
 export default function Header(){
 
@@ -31,7 +30,7 @@ export default function Header(){
             <SignedIn>
                 <div className="flex gap-2 lg:gap-4 items-center">
                     <Navlink href="/upload">Upload a PDF</Navlink>
-                    <div>Pro</div>
+                    <PlanBadge />
                     <SignedIn>
                         <UserButton />
                     </SignedIn>

@@ -6,6 +6,8 @@ import { handleCheckoutSessionCompleted, handleSubscriptionDeleted } from "@/uti
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export const POST = async (req: NextRequest) => {
+    console.log("🔎 Incoming /api/payments request from:",
+              req.headers.get("user-agent") ?? "unknown");
 
     const payload = await req.text();
 

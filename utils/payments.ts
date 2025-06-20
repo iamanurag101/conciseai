@@ -30,32 +30,37 @@ export async function handleCheckoutSessionCompleted({
     stripe: Stripe;
 }) {
     console.log("Checkout Session Completed", session);
-    const customerId = session.customer as string;
-    const customerDetails = session.customer_details;
 
-    const email = customerDetails?.email;
-    const name = customerDetails?.name;
-
-    const priceId = session.line_items?.data[0]?.price?.id;
-    if (email && priceId) {
-        const sql = await getDbConnection();
-    
-        await createOrUpdateUser({
-            sql,
-            email: email as string,
-            fullName: name as string,
-            customerId,
-            priceId: priceId as string,
-            status: 'active',
-        });
-
-        await createPayment({
-            sql,
-            session,
-            priceId: priceId as string,
-            userEmail: email as string,
-        })
-    };
+    try {      
+      const customerId = session.customer as string;
+      const customerDetails = session.customer_details;
+  
+      const email = customerDetails?.email;
+      const name = customerDetails?.name;
+  
+      const priceId = session.line_items?.data[0]?.price?.id;
+      if (email && priceId) {
+          const sql = await getDbConnection();
+      
+          await createOrUpdateUser({
+              sql,
+              email: email as string,
+              fullName: name as string,
+              customerId,
+              priceId: priceId as string,
+              status: 'active',
+          });
+  
+          await createPayment({
+              sql,
+              session,
+              priceId: priceId as string,
+              userEmail: email as string,
+          })
+      };
+    } catch (err) {
+      console.error('Error handling checkout session completed', err);
+    }
 }
 
 async function createOrUpdateUser({
