@@ -1,13 +1,14 @@
 'use client';
 
 import { z } from "zod";
-
-import { generatePdfSummary, storePdfSummaryAction } from "@/actions/upload-action";
-import UploadFormInput from "@/components/upload/upload-form-input"
-import { useUploadThing } from "@/utils/uploadthing";
-import { toast } from "sonner";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+
+import { toast } from "sonner";
+import UploadFormInput from "@/components/upload/upload-form-input"
+import { LoadingSkeleton } from "./loading-skeleton";
+import { generatePdfSummary, storePdfSummaryAction } from "@/actions/upload-action";
+import { useUploadThing } from "@/utils/uploadthing";
 
 const schema = z.object({
     file: z.instanceof(File, { message: 'Invalid File Type' })
@@ -115,6 +116,7 @@ export default function UploadForm () {
         <div className="flex flex-col gap-8 w-full max-w-2xl mx-auto">
             <UploadFormInput isLoading={isLoading} ref={formRef} onSubmit={handleSubmit}/>
             {isLoading && (
+                <>              
                 <div className="relative">
                 <div
                     className="absolute inset-0 flex items-center"
@@ -128,6 +130,8 @@ export default function UploadForm () {
                     </span>
                 </div>
                 </div>
+                <LoadingSkeleton />
+                </>
             )}
         </div>
     )
