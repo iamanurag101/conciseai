@@ -7,6 +7,7 @@ import ProgressBar from "./progress-bar";
 import ContentSection from "./content-section";
 import { Card } from "@/components/ui/card";
 import { parseSection } from "@/utils/summary-helpers";
+import { MotionDiv } from "@/components/common/motion-wrapper";
 
 const SectionTitle = ({title} : {title: string}) => {
     return (
@@ -41,7 +42,13 @@ export default function SummaryViewer({summary} : {summary: string}) {
 
                 <ProgressBar sections={sections} currentSection={currentSection}/>
 
-                <div className="h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] 
+                <MotionDiv 
+                key = {currentSection}
+                initial = {{opacity: 0}}
+                whileInView = {{opacity: 1}}
+                transition = {{duration: 0.2, ease: 'easeInOut'}}
+                exit={{opacity: 0}}
+                className="h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] 
                 [scrollbar-width:'none'] pt-12 sm:pt-16 pb-20 sm:pb-24">
                     <div className="px-4 sm:px-6">
                     <SectionTitle title={sections[currentSection].title}/>
@@ -50,7 +57,7 @@ export default function SummaryViewer({summary} : {summary: string}) {
                         points={sections[currentSection]?.points || []}
                     />
                     </div>
-                </div>
+                </MotionDiv>
             
 
                 <NavigationControls

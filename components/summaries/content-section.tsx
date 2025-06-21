@@ -1,3 +1,6 @@
+import { containerVariants } from "@/utils/constants";
+import { MotionDiv } from "@/components/common/motion-wrapper";
+
 export default function ContentSection({
     title,
     points
@@ -6,7 +9,13 @@ export default function ContentSection({
     points: string[];
 }) {
     return (
-        <div className="space-y-4">
+        <MotionDiv 
+        variants={containerVariants} 
+        key={points.join('')}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="space-y-4">
             {points.map((point,index) => {
                 return (
                     <div key={`point-${index}`}
@@ -24,6 +33,6 @@ export default function ContentSection({
                     </div>
                 )
             })}
-        </div>
+        </MotionDiv>
     )
 }
