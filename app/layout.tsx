@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: "Skip the fluff. Concise.ai distills your PDFs into powerful summaries so you can focus on what matters.",
   openGraph: {
     type: "website",
-    url: "",
+    url: "https://conciseai-byanurag.vercel.app",
     title: "Concise.ai - Your AI PDF Summarizer",
     description:
       "Skip the fluff. Concise.ai distills your PDFs into powerful summaries so you can focus on what matters.",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "",
+    site: "https://conciseai-byanurag.vercel.app",
     title: "Concise.ai - Your AI PDF Summarizer",
     description:
       "Skip the fluff. Concise.ai distills your PDFs into powerful summaries so you can focus on what matters.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "",
+    canonical: "https://conciseai-byanurag.vercel.app",
   },
   authors: {
     name: "Anurag Dey",
