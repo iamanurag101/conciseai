@@ -21,6 +21,40 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Concise.ai - Your AI PDF Summarizer",
   description: "Skip the fluff. Concise.ai distills your PDFs into powerful summaries so you can focus on what matters.",
+  openGraph: {
+    type: "website",
+    url: "",
+    title: "Concise.ai - Your AI PDF Summarizer",
+    description:
+      "Skip the fluff. Concise.ai distills your PDFs into powerful summaries so you can focus on what matters.",
+    images: [
+      {
+        url: "/images/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Concise.ai - Your AI PDF Summarizer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "",
+    title: "Concise.ai - Your AI PDF Summarizer",
+    description:
+      "Skip the fluff. Concise.ai distills your PDFs into powerful summaries so you can focus on what matters.",
+    images: [
+      {
+        url: "/images/opengraph-image.png",
+        alt: "Concise.ai - Your AI PDF Summarizer",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "",
+  },
+  authors: {
+    name: "Anurag Dey",
+  },
 };
 
 export default function RootLayout({
