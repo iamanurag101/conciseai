@@ -1,33 +1,29 @@
-export const demoSummary = `# 📚 DBMS Demystified: Your Crash Course 🚀
-• 💡 Learn core database concepts in a nutshell!
-• 🛠️ Master data handling from basics to advanced techniques.
+export const demoSummary = `# Anurag Dey: Software Developer Profile 💻🚀  
+• 💡 A versatile and detail-oriented software developer with hands-on experience in building scalable, performant applications across the stack.  
+• 🛠️ Strong foundation in backend architecture, RESTful API design, and database optimization, with proven impact in live production environments.
 
-# Document Details
-• 📄 Type: Lecture Notes
-• 🎯 For: Students, Developers, Data Enthusiasts
+# Document Details  
+• 📄 Type: Resume  
+• 🎯 For: Recruiters, Technical Hiring Managers
 
-# Key Highlights
-• 🔥 Data vs. Information: Know the difference!
-• ✨ DBMS Architecture: Understand the layers.
-• 📌 Normalization: Keep your data clean and efficient.
+# Key Highlights  
+• 🔥 Software Development Intern at a BSE-listed firm via House of Development—boosted API efficiency by 30% and contributed to core portal features.  
+• ✨ Creator of Concise.ai—an AI-driven PDF summarization platform built with Google Gemini, LangChain, and Next.js.  
+• 🚀 Developed Stu-Rental, a React + Node.js based student housing platform with geolocation mapping and JWT-based authentication.  
+• 🧠 Integrated SEO, Payload CMS, and AWS S3 handling in Manuscript AI internship to achieve 10× performance boost.  
 
-# Why It Matters
-• 📣 Databases are everywhere! From your phone to huge websites, understanding DBMS is crucial for anyone working with data. This guide breaks down complex ideas into simple terms, so you can build solid data foundations.
+# Why It Matters  
+• 📣 Anurag blends academic excellence with startup agility. His internship and project experience showcase not only technical depth in Node.js, SQL, and API design, but also initiative in UI/UX, scalability, and deployment. He demonstrates maturity in working with real-world systems under resource constraints.
 
-# Main Points
-• 🔍 Data is raw facts, information is processed data.
-• 💪 DBMS helps manage and access data efficiently.
-• 🏁 ACID properties ensure reliable transactions.
+# Main Points  
+• 🔍 Strong backend skills with Node.js, Express.js, MySQL/PostgreSQL, and Sequelize/Prisma ORM.  
+• 💪 Built full-stack applications from scratch using modern tools like Next.js, Tailwind CSS, AWS S3, and Payload CMS.  
+• 🏁 Consistently improves performance—achieving 10× load speedups, 20% reduced memory, and high Lighthouse scores in deployed apps.
 
-# Pro Tips
-• 💡 Choose the right database model for your needs.
-• ✨ Indexing speeds up data retrieval.
-• 📌 Normalization prevents data anomalies.
+# Key Terms to Know  
+• 📝 BCNF: Boyce-Codd Normal Form—a data normalization technique used in PostgreSQL schema design.  
+• 📘 RESTful APIs: Efficient backend interfaces enabling scalable client-server interactions.
 
-# Key Terms to Know
-• 📝 Data: Raw, unorganized facts.
-• 📘 Information: Processed, structured data with context.
-
-# Bottom Line
-• 🔚 Mastering DBMS unlocks efficient data management and powerful applications! 🔑
+# Bottom Line  
+• 🔚 Anurag Dey is a high-potential software developer who can own and deliver end-to-end solutions—from schema design to cloud deployment—making him a strong fit for dynamic development teams. 🌟
 `;

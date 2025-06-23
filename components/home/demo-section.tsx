@@ -33,9 +33,9 @@ export default function DemoSection() {
                         className="font-bold text-3xl max-w-2xl mx-auto px-4 sm:px-6">
                             Watch how Concise.ai transforms{' '}  
                             <span className="bg-linear-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
-                                this DBMS crash course PDF
+                                Anurag Dey's Profile
                             </span> 
-                            {' '}into an easy-to-read summary
+                            {' '}into an easy-to-read summary for recruiters and hiring managers.
                         </MotionH3>
                     </div>
                 </div>
